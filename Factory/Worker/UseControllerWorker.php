@@ -23,7 +23,7 @@ use Assetic\Factory\AssetFactory;
 
 class UseControllerWorker implements WorkerInterface
 {
-    public function process(AssetInterface $asset, AssetFactory $factory)
+    public function process(AssetInterface $asset)
     {
         $targetUrl = $asset->getTargetPath();
         if ($targetUrl && '/' != $targetUrl[0] && 0 !== strpos($targetUrl, '_controller/')) {
